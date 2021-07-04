@@ -45,6 +45,8 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  position: sticky;
+  top : 0
   /* position: absolute; */
 `;
 
