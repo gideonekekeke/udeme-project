@@ -2,15 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "antd";
 import "antd/dist/antd.css";
-import pic from "../../../img/f1.jpg";
-const MainCartCard = () => {
+const AllFood = ({ pic, title }) => {
   return (
     <>
       <CartCardHolder>
         <CartCard>
           <CartImage src={pic} />
           <TitleHolder>
-            <TiltleCart>Vegetable Soup</TiltleCart>
+            <TiltleCart>{title}</TiltleCart>
             <CartPrice>#2,000</CartPrice>
           </TitleHolder>
           <ButtomButtonHolder>
@@ -41,7 +40,7 @@ const MainCartCard = () => {
   );
 };
 
-export default MainCartCard;
+export default AllFood;
 
 const ScrollHolder = styled.div`
   height: 100%;
@@ -87,7 +86,7 @@ const CartCard = styled.div`
   width: 300px;
   background-color: white;
   margin: 10px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   border-radius: 5px;
   box-shadow: 0px 5px 7px -2px rgba(0, 0, 0, 0.35);
   flex-direction: column;
@@ -99,21 +98,18 @@ const CartCard = styled.div`
     cursor: pointer;
   }
   @media screen and (max-width: 600px) {
-    margin: 10px;
-    margin-top: 20px;
+    /* margin: 10px;
+    margin-top: 20px; */
   }
 `;
 
 const CartCardHolder = styled.div`
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  /* width: 100%; */
-  /* background-color: red; */
+  justify-content: center;
+  align-items: center; /* width: 100%; */ /* background-color: red; */
   /* flex-wrap: wrap; */
-
   @media screen and (max-width: 600px) {
-    width: 1000px;
+    /* width: 1000px; */
 
     /* background-color: red; */
   }

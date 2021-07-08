@@ -4,6 +4,7 @@ import { Button } from "antd";
 import "antd/dist/antd.css";
 import pic from "../../../img/f1.jpg";
 import MainCartCard from "../MainCartCard/MainCartCard";
+import { Link } from "react-router-dom";
 
 const FeaturedCard = () => {
   return (
@@ -27,7 +28,26 @@ const FeaturedCard = () => {
           </Button>
         </CartMenu>
         <MainCartCard />
+        <MainCartCard />
+        <MainCartCard />
+        <MainCartCard />
+        <MainCartCard />
+        <MainCartCard />
+        <MainCartCard />
       </CartHolder>
+      <Link to="/ordernow">
+        <Button
+          style={{
+            margin: "10px",
+            width: "150px",
+            height: "40px",
+            backgroundColor: "#c0de8a ",
+            color: "black",
+          }}
+        >
+          See More ->
+        </Button>
+      </Link>
     </Container>
   );
 };
@@ -78,12 +98,6 @@ const CartCard = styled.div`
   }
 `;
 
-const CartCardHolder = styled.div`
-  display: flex;
-  flex: 1;
-  background-color: white;
-`;
-
 const SelectText = styled.div``;
 
 const ContainerText = styled.div`
@@ -96,10 +110,15 @@ const ContainerText = styled.div`
 const CartMenu = styled.div`
   /* height: 200px; */
   width: 200px;
-  /* background-color: black; */
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  /* position: relative; */
+  left: 0;
+  top: 0;
+  z-index: 1;
   /* justify-content: center; */
   border-right: 1px solid silver;
   margin-top: 20px;
@@ -115,6 +134,7 @@ const CartMenu = styled.div`
 
 const Container = styled.div`
   width: 100%;
+
   /* background-color: red; */
 
   display: flex;
@@ -127,6 +147,11 @@ const Container = styled.div`
 const CartHolder = styled.div`
   width: 80%;
   display: flex;
+  overflow-x: auto;
+  /* -ms-overflow-style: none; */
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   /* justify-content: space-between; */
 `;
