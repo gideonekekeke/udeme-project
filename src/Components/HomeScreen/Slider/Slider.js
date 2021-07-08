@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import pic from "../../../img/f1.jpg";
 import { Carousel } from "antd";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   return (
@@ -11,7 +12,9 @@ const Slider = () => {
         <Info>Welcome to Udeme Kitchen </Info>
         <Info1>Enjoy Super Delicious African Meal.</Info1>
 
-        <Button1>ORDER NOW</Button1>
+        <Link to="/ordernow">
+          <Button1>ORDER NOW</Button1>
+        </Link>
       </Wrapper>
     </Container>
   );
@@ -60,8 +63,8 @@ const Info = styled.div`
 const Info1 = styled.p`
   color: white;
 
-  width: 28.9ch;
-  animation: typing 10s steps(40, end), blink-caret 0.75s step-end infinite;
+  width: 29.8ch;
+  animation: typing 14s steps(45, end), blink-caret 0.85s step-end infinite;
   animation-iteration-count: infinite;
 
   white-space: nowrap;

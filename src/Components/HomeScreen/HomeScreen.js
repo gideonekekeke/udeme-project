@@ -1,5 +1,6 @@
 import React from "react";
-import Footer from "../Footer/Footer";
+
+import DoMore from "./DoMore/DoMore";
 import FeaturedCard from "./FeaturedCard/FeaturedCard";
 import DeliveryImage from "./Slider/DeliveryImage";
 import Slider from "./Slider/Slider";
@@ -10,7 +11,7 @@ const HomeScreen = () => {
       <Slider />
       <DeliveryImage />
       <FeaturedCard />
-      <Footer />
+      <DoMore />
     </div>
   );
 };

@@ -29,7 +29,7 @@ const Footer = () => {
           <Direct5>Terms of services</Direct5>
         </Wrapper>
         <Wrapper>
-          <span>Videos </span>
+          <span>About Us </span>
 
           <Direct1>How it Work</Direct1>
           <Direct2>Testimonia</Direct2>
@@ -187,6 +187,7 @@ const Direct5 = styled.div`
 
 const Container = styled.div`
   background-color: #004a1e;
+  margin-top: 20px;
   width: 100%;
   /* height: 35vh; */
   color: white;
@@ -205,6 +206,7 @@ const Wrapper = styled.div`
   display: flex;
   font-weight: bold;
   flex-direction: column;
+
   span {
     margin-top: 20px;
     text-transform: uppercase;

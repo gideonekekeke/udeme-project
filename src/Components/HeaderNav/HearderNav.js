@@ -2,13 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import log from "../../img/ud1.png";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { Link } from "react-router-dom";
 const HearderNav = () => {
   return (
     <NavContainer>
       <Logo src={log} />
       <NavHolder>
-        <Homebar>Home</Homebar>
-        <Homebar>Order </Homebar>
+        <Link style={{ textDecoration: "none", color: "black" }} to="/">
+          <Homebar>Home</Homebar>
+        </Link>
+        <Link style={{ textDecoration: "none", color: "black" }} to="/ordernow">
+          <Homebar>Order </Homebar>
+        </Link>
         <Homebar>About </Homebar>
       </NavHolder>
       <CartHolder>
@@ -46,7 +51,9 @@ const NavContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   position: sticky;
-  top : 0
+  top: 0;
+
+  z-index: 100;
   /* position: absolute; */
 `;
 
